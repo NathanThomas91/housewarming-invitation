@@ -809,3 +809,46 @@ html {
     height: 17px;
   }
 }
+
+
+.mobile-map {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-map {
+    position: fixed;
+    z-index: 11;
+    right: 20px;
+    bottom: 105px;
+    display: flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #C9B783;
+    border-radius: 15px;
+    background: #38291F;
+    color: #D8C28B;
+    box-shadow: 0 5px 20px rgba(56, 41, 31, 0.2);
+    text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease;
+  }
+
+  .mobile-map svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .mobile-map:active {
+    transform: scale(0.94);
+    background: #6B5B43;
+  }
+}
