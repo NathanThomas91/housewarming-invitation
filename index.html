@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our New Home | Housewarming Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="invitation">
+
+    <img class="floral floral-top-left"
+         src="images/Watercolor Pink Floral Corner Garland.png"
+         alt="Pink watercolor flowers">
+
+    <img class="floral floral-bottom-right"
+         src="images/Watercolor Pink Floral Corner Garland.png"
+         alt="Pink watercolor flowers">
+
+    <div class="eyebrow">A NEW</div>
+    <h1>HOME</h1>
+    <h2 class="subtitle">A NEW BEGINNING</h2>
+
+    <img class="door"
+         src="images/Welcoming Sage Green Entryway-1.png"
+         alt="Welcoming sage green entryway">
+
+    <div class="invitation-label">
+      <span></span>
+      YOU'RE INVITED
+      <span></span>
+    </div>
+
+    <section class="event-details">
+      <p>Wednesday, October 21, 2026</p>
+      <p>Time : AM</p>
+      <p>Sivaji Nagar, Pallimukku,<br>Trivandrum</p>
+
+      <a class="map-link"
+         href="https://maps.app.goo.gl/kZLveSZ888UqMfh88"
+         target="_blank"
+         rel="noopener noreferrer">
+        Open location in Google Maps
+      </a>
+    </section>
+
+    <img class="gold-divider"
+         src="images/Minimalist_Gold_Botanical_Divider-removebg-preview.png"
+         alt="Gold botanical divider">
+
+    <blockquote>
+      “But as for me and my household, we will serve the LORD.”
+    </blockquote>
+    <p class="verse-reference">JOSHUA 24:15</p>
+
+    <section class="rsvp">
+      <h2>KINDLY RESPOND</h2>
+
+      <form id="rsvpForm">
+        <label for="name">Your name</label>
+        <input id="name" name="name" maxlength="100"
+               autocomplete="name" required
+               placeholder="Enter your name">
+
+        <label for="status">Will you be attending?</label>
+        <select id="status" name="status" required>
+          <option value="">Please select</option>
+          <option value="Yes">Yes, we will attend</option>
+          <option value="No">Sorry, we cannot attend</option>
+        </select>
+
+        <div id="paxArea" hidden>
+          <label for="pax">Number of people attending</label>
+          <select id="pax" name="pax">
+            <option value="">Select number of people</option>
+            <option value="1">1 person</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4">4 people</option>
+            <option value="5">5 people</option>
+            <option value="6">6 people</option>
+            <option value="7">7 people</option>
+            <option value="8">8 people</option>
+            <option value="9">9 people</option>
+            <option value="10">10 people</option>
+          </select>
+        </div>
+
+        <label for="messageBox">Message (optional)</label>
+        <textarea id="messageBox" name="message" rows="3"
+                  placeholder="Leave us a message"></textarea>
+
+        <button type="submit" id="submitBtn">CONFIRM RSVP</button>
+        <p id="feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <img class="house-divider"
+         src="images/Golden House Botanical Divider.png"
+         alt="Golden house ornament">
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+s
