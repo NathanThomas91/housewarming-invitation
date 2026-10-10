@@ -78,3 +78,40 @@ form.addEventListener('submit', (event) => {
 
   document.body.appendChild(requestScript);
 });
+
+// Floating RSVP reminder
+const rsvpToast = document.getElementById('rsvpToast');
+const rsvpToastLink = document.getElementById('rsvpToastLink');
+const toastClose = document.getElementById('toastClose');
+
+let toastDismissed = false;
+let toastTimer;
+
+function hideRsvpToast() {
+  toastDismissed = true;
+  rsvpToast.classList.remove('visible');
+  clearTimeout(toastTimer);
+  window.removeEventListener('scroll', handleToastScroll);
+}
+
+function handleToastScroll() {
+  if (window.scrollY > 40) {
+    hideRsvpToast();
+  }
+}
+
+toastClose.addEventListener('click', hideRsvpToast);
+
+rsvpToastLink.addEventListener('click', () => {
+  hideRsvpToast();
+});
+
+window.addEventListener('scroll', handleToastScroll, {
+  passive: true
+});
+
+toastTimer = setTimeout(() => {
+  if (!toastDismissed && window.scrollY <= 40) {
+    rsvpToast.classList.add('visible');
+  }
+}, 3000);

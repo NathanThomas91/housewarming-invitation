@@ -304,3 +304,508 @@ blockquote {
     width: 130px;
   }
 }
+
+
+/* ===== PREMIUM INVITATION FINISH ===== */
+
+:root {
+  --ivory: #F3EADB;
+  --outer-bg: #F6F2EB;
+  --gold: #C9B783;
+  --dark-brown: #38291F;
+  --muted-gold: #B99A54;
+  --sage: #879078;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 50% 0%, #fffaf2 0%, transparent 65%),
+    var(--outer-bg);
+  padding: 36px 16px;
+}
+
+.invitation {
+  max-width: 620px;
+  padding: 55px 42px 38px;
+  border-color: rgba(185, 154, 84, 0.85);
+  outline-color: rgba(185, 154, 84, 0.65);
+  box-shadow:
+    0 20px 70px rgba(56, 41, 31, 0.07),
+    0 2px 8px rgba(56, 41, 31, 0.025);
+  animation: invitationReveal 1s ease-out both;
+}
+
+.eyebrow {
+  color: #806B48;
+  font-size: 15px;
+  letter-spacing: 8px;
+}
+
+h1 {
+  font-size: clamp(76px, 13vw, 108px);
+  letter-spacing: -4px;
+  text-shadow: 0 2px 1px rgba(56, 41, 31, 0.035);
+}
+
+.subtitle {
+  margin-top: 12px;
+  margin-bottom: 28px;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.door {
+  max-width: 420px;
+  margin-bottom: 24px;
+  animation: doorwayReveal 1.3s ease-out both;
+  animation-delay: 0.15s;
+}
+
+.invitation-label {
+  gap: 19px;
+  margin: 20px 0 26px;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.invitation-label span {
+  width: 32px;
+  transition: width 0.4s ease;
+}
+
+.invitation-label:hover span {
+  width: 46px;
+}
+
+.event-details {
+  line-height: 1.55;
+  letter-spacing: 0.7px;
+}
+
+.event-details p {
+  margin: 8px 0;
+}
+
+.map-link {
+  font-size: 16px;
+  transition: color 0.25s ease;
+}
+
+.gold-divider {
+  width: 105px;
+  margin: 30px auto 22px;
+  animation: gentleFade 1.2s ease both;
+}
+
+blockquote {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.verse-reference {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+}
+
+.floral {
+  opacity: 0.76;
+  transition: opacity 0.5s ease;
+  animation: floralReveal 1.5s ease-out both;
+}
+
+.floral-top-left {
+  width: 175px;
+}
+
+.floral-bottom-right {
+  width: 190px;
+}
+
+.rsvp {
+  margin-top: 30px;
+  padding: 30px 12px 14px;
+  scroll-margin-top: 24px;
+}
+
+.rsvp h2 {
+  color: #806B48;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.rsvp input,
+.rsvp select,
+.rsvp textarea {
+  border-color: #D8C8A8;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.rsvp button {
+  background: var(--dark-brown);
+  padding: 16px;
+  letter-spacing: 2.5px;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.rsvp button:hover {
+  background: #6B5B43;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(56, 41, 31, 0.13);
+}
+
+.house-divider {
+  width: 105px;
+  margin-top: 25px;
+}
+
+/* Elegant reveal animations */
+
+@keyframes invitationReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes doorwayReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floralReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.76;
+  }
+}
+
+@keyframes gentleFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile refinements */
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px 7px 80px;
+  }
+
+  .invitation {
+    padding: 43px 23px 30px;
+  }
+
+  h1 {
+    font-size: clamp(66px, 17vw, 84px);
+    letter-spacing: -3px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .door {
+    margin-bottom: 19px;
+  }
+
+  .event-details {
+    font-size: 18px;
+  }
+
+  blockquote {
+    font-size: 16px;
+  }
+
+  .floral-top-left {
+    width: 112px;
+  }
+
+  .floral-bottom-right {
+    width: 140px;
+  }
+
+  .rsvp {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+/* Respect reduced-motion accessibility preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.rsvp-shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: -7px auto 20px;
+  padding: 10px 17px;
+  border: 1px solid var(--gold);
+  color: var(--dark-brown);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.rsvp-shortcut:hover {
+  background: var(--dark-brown);
+  color: var(--ivory);
+}
+
+.mobile-rsvp {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-rsvp {
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: min(290px, calc(100% - 36px));
+    padding: 15px 20px;
+    border: 1px solid #B99A54;
+    border-radius: 3px;
+    background: #38291F;
+    color: #F3EADB;
+    box-shadow: 0 5px 24px rgba(56, 41, 31, 0.2);
+    font: 12px Arial, sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+}
+
+
+/* Subtle invitation scroll hint */
+
+.scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto 14px;
+  color: #9B865B;
+  font: 9px Arial, sans-serif;
+  letter-spacing: 2.5px;
+  opacity: 0;
+  animation: hintAppear 0.8s ease 3s forwards;
+}
+
+.scroll-arrow {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  animation: arrowFloat 1.8s ease-in-out infinite;
+}
+
+@keyframes hintAppear {
+  to { opacity: 0.8; }
+}
+
+@keyframes arrowFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint,
+  .scroll-arrow {
+    animation: none;
+    opacity: 0.8;
+  }
+}
+
+
+/* Floating RSVP notification */
+
+.rsvp-toast {
+  position: fixed;
+  z-index: 100;
+  top: 22px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  max-width: calc(100% - 28px);
+  padding: 0 10px 0 18px;
+  border: 1px solid #C9B783;
+  border-radius: 50px;
+  background: rgba(255, 250, 242, 0.97);
+  box-shadow: 0 8px 28px rgba(56, 41, 31, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -14px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s ease;
+  pointer-events: none;
+}
+
+.rsvp-toast.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.rsvp-toast a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 0;
+  color: #38291F;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+}
+
+.toast-arrow {
+  color: #A78B50;
+  font-size: 18px;
+  animation: toastArrowFloat 1.5s ease-in-out infinite;
+}
+
+.toast-close {
+  padding: 4px 3px 4px 7px;
+  border: 0;
+  background: transparent;
+  color: #806B48;
+  font: 21px Georgia, serif;
+  cursor: pointer;
+}
+
+@keyframes toastArrowFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+@media (max-width: 480px) {
+  .rsvp-toast {
+    top: 14px;
+  }
+
+  .rsvp-toast a {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast-arrow {
+    animation: none;
+  }
+}
+
+
+/* Left-aligned event details with delicate gold icons */
+
+.event-details {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 19px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+
+.event-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin: 17px 0;
+}
+
+.detail-icon {
+  display: flex;
+  flex: 0 0 20px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4px;
+  color: #A78B50;
+}
+
+.detail-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.event-row p {
+  margin: 0;
+}
+
+.location-text {
+  min-width: 0;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 9px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 480px) {
+  .event-details {
+    max-width: 330px;
+    font-size: 17px;
+  }
+
+  .event-row {
+    gap: 11px;
+    margin: 15px 0;
+  }
+
+  .detail-icon {
+    flex-basis: 19px;
+  }
+
+  .detail-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+}

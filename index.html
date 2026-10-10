@@ -8,6 +8,14 @@
 </head>
 
 <body>
+    <div class="rsvp-toast" id="rsvpToast" role="status">
+    <a href="#rsvp" id="rsvpToastLink">
+        <span class="toast-message">Scroll down to respond</span>
+        <span class="toast-arrow">↓</span>
+    </a>
+    <button type="button" class="toast-close"
+            id="toastClose" aria-label="Dismiss notification">×</button>
+    </div>
   <main class="invitation">
 
     <img class="floral floral-top-left"
@@ -21,7 +29,8 @@
     <div class="eyebrow">A NEW</div>
     <h1>HOME</h1>
     <h2 class="subtitle">A NEW BEGINNING</h2>
-
+    
+    </div>
     <img class="door"
          src="images/Welcoming Sage Green Entryway-1.png"
          alt="Welcoming sage green entryway">
@@ -33,18 +42,46 @@
     </div>
 
     <section class="event-details">
-      <p>Wednesday, October 21, 2026</p>
-      <p>Time : AM</p>
-      <p>Sivaji Nagar, Pallimukku,<br>Trivandrum</p>
+    <div class="event-row">
+        <span class="detail-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+            <rect x="3.5" y="5.5" width="17" height="15" rx="2"/>
+            <path d="M7.5 3.5v4M16.5 3.5v4M3.5 10h17"/>
+        </svg>
+        </span>
+        <p>Wednesday, October 21, 2026</p>
+    </div>
 
-      <a class="map-link"
-         href="https://maps.app.goo.gl/kZLveSZ888UqMfh88"
-         target="_blank"
-         rel="noopener noreferrer">
-        Open location in Google Maps
-      </a>
+    <div class="event-row">
+        <span class="detail-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8.5"/>
+            <path d="M12 7v5l3.5 2"/>
+        </svg>
+        </span>
+        <p>Time : AM</p>
+    </div>
+
+    <div class="event-row">
+        <span class="detail-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+            <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/>
+            <circle cx="12" cy="10" r="2.3"/>
+        </svg>
+        </span>
+        <div class="location-text">
+        <p>Sivaji Nagar, Pallimukku,</p>
+        <p>Trivandrum</p>
+        <a class="map-link"
+            href="https://maps.app.goo.gl/kZLveSZ888UqMfh88"
+            target="_blank"
+            rel="noopener noreferrer">
+            Open location in Google Maps ↗
+        </a>
+        </div>
+    </div>
     </section>
-
+    
     <img class="gold-divider"
          src="images/Minimalist_Gold_Botanical_Divider-removebg-preview.png"
          alt="Gold botanical divider">
@@ -54,7 +91,7 @@
     </blockquote>
     <p class="verse-reference">JOSHUA 24:15</p>
 
-    <section class="rsvp">
+    <section class="rsvp" id="rsvp">
       <h2>KINDLY RESPOND</h2>
 
       <form id="rsvpForm">
@@ -103,6 +140,9 @@
   </main>
 
   <script src="script.js"></script>
+  <a class="mobile-rsvp" href="#rsvp" aria-label="Jump to RSVP form">
+    Kindly Respond <span>↓</span>
+  </a>
 </body>
 </html>
 s
